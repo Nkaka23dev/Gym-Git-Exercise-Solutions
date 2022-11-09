@@ -603,3 +603,73 @@ HEAD is now at bcc905a bring back stashed file home and abou
 TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (dev)
 $
 ...
+
+## Bundle 1
+
+### exercises 1
+
+...
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (dev)
+$ git add .
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (dev)
+$ git commit -m "Bundle 1 exercise 2 DONE111"
+[dev acef7a1] Bundle 1 exercise 2 DONE111
+ 1 file changed, 465 insertions(+), 1 deletion(-)
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (dev)
+$ git status
+On branch dev
+Your branch is ahead of 'origin/dev' by 1 commit.
+  (use "git push" to publish your local commits)
+
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        services.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/bundle-2)
+$ git add .
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/bundle-2)
+$ git commit -m "added services page"
+[ft/bundle-2 8ad5ea0] added services page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 services.html
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/bundle-2)
+$ git push
+fatal: The current branch ft/bundle-2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/bundle-2
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/bundle-2)
+$ git push --set-upstream origin ft/bundle-2
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (13/13), 3.77 KiB | 966.00 KiB/s, done.
+Total 13 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), done.
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/Nkaka23dev/Gym-Git-Exercise-Solutions/pull/new/ft/bundle-2     
+remote:
+To https://github.com/Nkaka23dev/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/bundle-2)
+$
+...
