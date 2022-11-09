@@ -141,7 +141,7 @@ $
 
 ...
 
-### exercises 1
+### exercises 2
 
 ...
 TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (dev)
