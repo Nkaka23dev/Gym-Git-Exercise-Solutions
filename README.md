@@ -828,5 +828,536 @@ $
 ### exercises 1
 
 ...
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/service-redesign|MERGING)
+$ git status
+On branch ft/service-redesign
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   services.html
+
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/service-redesign)
+$ git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git branch
+  dev
+  ft/bundle-2
+  ft/service-redesign
+* ft/team-page
+  main
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git status
+On branch ft/team-page
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        team.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git add .
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git commit -m "added team pages and modified it"
+[ft/team-page 4f06e01] added team pages and modified it
+ 2 files changed, 31 insertions(+)
+ create mode 100644 team.html
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git push
+fatal: The current branch ft/team-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/team-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$  git push --set-upstream origin ft/team-page
+Enumerating objects: 17, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 2.54 KiB | 520.00 KiB/s, done.
+Total 11 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 3 local objects.
+remote: 
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/Nkaka23dev/Gym-Git-Exercise-Solutions/pull/new/ft/team-page    
+remote:
+To https://github.com/Nkaka23dev/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git log
+commit 4f06e011fe4587f54d5c34c19b30fe23b43e7957 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Nkaka23dev <nkakaeric96@gmail.com>
+Date:   Thu Nov 10 12:36:13 2022 +0200
+
+    added team pages and modified it
+
+commit f13ae8541bb06a23cc2e444883cba240ae3b525f (ft/service-redesign)
+Merge: dada12f b279826
+Author: Nkaka23dev <nkakaeric96@gmail.com>
+Date:   Thu Nov 10 12:27:40 2022 +0200
+
+    updated
+
+commit b27982637e0074dc1786c86343810e7417beb17f (main, ft/contact-page)
+Author: Nkaka23dev <nkakaeric96@gmail.com>
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git cherry-pick 4f06e011fe4587f54d5c34c19b30fe23b43e79571
+fatal: bad revision '4f06e011fe4587f54d5c34c19b30fe23b43e79571'
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git cherry-pick '4f06e011fe4587f54d5c34c19b30fe23b43e79571'~
+fatal: bad revision '4f06e011fe4587f54d5c34c19b30fe23b43e79571~'
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git cherry-pick 4f06e011fe4587f54d5c34c19b30fe23b43e79571
+fatal: bad revision '4f06e011fe4587f54d5c34c19b30fe23b43e79571'
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git log
+commit b27982637e0074dc1786c86343810e7417beb17f (HEAD -> ft/contact-page, main)
+Author: Nkaka23dev <nkakaeric96@gmail.com>
+Date:   Thu Nov 10 12:07:24 2022 +0200
+
+    changed services form main
+
+commit aabf40ed7320ca429ea03675e0ebaf2a35ec0366 (origin/main)
+Merge: bdb1587 2e98b2e
+Author: ericnkaka <62412678+Nkaka23dev@users.noreply.github.com>
+Date:   Thu Nov 10 11:58:10 2022 +0200
+
+    Merge pull request #1 from Nkaka23dev/dev
+
+    Bundle 1 exercises
+
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git branch
+  dev
+  ft/bundle-2
+* ft/contact-page
+  ft/service-redesign
+  ft/team-page
+  main
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git log
+commit 4f06e011fe4587f54d5c34c19b30fe23b43e7957 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Nkaka23dev <nkakaeric96@gmail.com>
+Date:   Thu Nov 10 12:36:13 2022 +0200
+
+    added team pages and modified it
+
+commit f13ae8541bb06a23cc2e444883cba240ae3b525f (ft/service-redesign)
+Merge: dada12f b279826
+Author: Nkaka23dev <nkakaeric96@gmail.com>
+Date:   Thu Nov 10 12:27:40 2022 +0200
+
+    updated
+
+commit b27982637e0074dc1786c86343810e7417beb17f (main, ft/contact-page)
+Author: Nkaka23dev <nkakaeric96@gmail.com>
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git cherry-pick 4f06e011fe4587f54d5c34c19b30fe23b43e79571~
+fatal: bad revision '4f06e011fe4587f54d5c34c19b30fe23b43e79571~'
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git cherry-pick 4f06e011fe4587f54d5c34c19b30fe23b43e79571
+fatal: bad revision '4f06e011fe4587f54d5c34c19b30fe23b43e79571'
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git log
+commit 4f06e011fe4587f54d5c34c19b30fe23b43e7957 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Nkaka23dev <nkakaeric96@gmail.com>
+Date:   Thu Nov 10 12:36:13 2022 +0200
+
+    added team pages and modified it
+
+commit f13ae8541bb06a23cc2e444883cba240ae3b525f (ft/service-redesign)
+Merge: dada12f b279826
+Author: Nkaka23dev <nkakaeric96@gmail.com>
+Date:   Thu Nov 10 12:27:40 2022 +0200
+
+    updated
+
+commit b27982637e0074dc1786c86343810e7417beb17f (main, ft/contact-page)
+Author: Nkaka23dev <nkakaeric96@gmail.com>
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git cherry-pick commit 4f06e011fe4587f54d5c34c19b30fe23b43e7957
+fatal: bad revision 'commit'
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git cherry-pick 4f06e011fe4587f54d5c34c19b30fe23b43e7957
+The previous cherry-pick is now empty, possibly due to conflict resolution.
+If you wish to commit it anyway, use:
+
+    git commit --allow-empty
+
+Otherwise, please use 'git cherry-pick --skip'
+On branch ft/team-page
+Your branch is up to date with 'origin/ft/team-page'.
+
+You are currently cherry-picking commit 4f06e01.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+nothing to commit, working tree clean
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page|CHERRY-PICKING)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+warning: cancelling a cherry picking in progress
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git cherry-pick 4f06e011fe4587f54d5c34c19b30fe23b43e7957
+Auto-merging README.md
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page|CHERRY-PICKING)
+$ git status
+On branch ft/contact-page
+You are currently cherry-picking commit 4f06e01.
+  (fix conflicts and run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes to be committed:
+        new file:   team.html
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   README.md
+
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page|CHERRY-PICKING)
+$ git checkout ft/team-page
+error: you need to resolve your current index first
+README.md: needs merge
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page|CHERRY-PICKING)
+$ git cherry-pick 4f06e011fe4587f54d5c34c19b30fe23b43e7957
+error: Cherry-picking is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: cherry-pick failed
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page|CHERRY-PICKING)
+$ git status
+On branch ft/contact-page
+You are currently cherry-picking commit 4f06e01.
+  (fix conflicts and run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes to be committed:
+        new file:   team.html
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   README.md
+
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page|CHERRY-PICKING)
+$ git cherry-pick --skip
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git cherry-pick --abort
+error: no cherry-pick or revert in progress
+fatal: cherry-pick failed
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git status
+On branch ft/contact-page
+nothing to commit, working tree clean
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git status
+On branch ft/team-page
+Your branch is up to date with 'origin/ft/team-page'.
+
+nothing to commit, working tree clean
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git branch
+  dev
+  ft/bundle-2
+  ft/contact-page
+  ft/service-redesign
+* ft/team-page
+  main
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git status
+On branch ft/team-page
+Your branch is up to date with 'origin/ft/team-page'.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git checkout ft/team-page 
+Already on 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git log
+commit 4f06e011fe4587f54d5c34c19b30fe23b43e7957 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Nkaka23dev <nkakaeric96@gmail.com>
+Date:   Thu Nov 10 12:36:13 2022 +0200
+
+    added team pages and modified it
+
+commit f13ae8541bb06a23cc2e444883cba240ae3b525f (ft/service-redesign)
+Merge: dada12f b279826
+Author: Nkaka23dev <nkakaeric96@gmail.com>
+Date:   Thu Nov 10 12:27:40 2022 +0200
+
+    updated
+
+commit b27982637e0074dc1786c86343810e7417beb17f (main, ft/contact-page)
+Author: Nkaka23dev <nkakaeric96@gmail.com>
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git checkout -b ft/contact-page
+fatal: a branch named 'ft/contact-page' already exists
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git cherry-check  4f06e011fe4587f54d5c34c19b30fe23b43e7957
+git: 'cherry-check' is not a git command. See 'git --help'.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git cherry-pick  4f06e011fe4587f54d5c34c19b30fe23b43e7957
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+error: could not apply 4f06e01... added team pages and modified it
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page|CHERRY-PICKING)
+$ git cherry-pick  4f06e011fe4587f54d5c34c19b30fe23b43e7957
+error: your local changes would be overwritten by cherry-pick.
+hint: commit your changes or stash them to proceed.
+fatal: cherry-pick failed
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page|CHERRY-PICKING)
+$ git status
+On branch ft/contact-page
+You are currently cherry-picking commit 4f06e01.
+  (all conflicts fixed: run "git cherry-pick --continue")
+  (use "git cherry-pick --skip" to skip this patch)
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Changes to be committed:
+        modified:   README.md
+        new file:   team.html
+
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page|CHERRY-PICKING)
+$ git checkout main
+Switched to branch 'main'
+warning: cancelling a cherry picking in progress
+M       README.md
+A       team.html
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git add .
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git commit -m "upfdated readMe"
+[main c013188] upfdated readMe
+ 2 files changed, 224 insertions(+)
+ create mode 100644 team.html
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git push
+To https://github.com/Nkaka23dev/Gym-Git-Exercise-Solutions.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/Nkaka23dev/Gym-Git-Exercise-Solutions.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git pull
+remote: Enumerating objects: 2, done.
+remote: Counting objects: 100% (2/2), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (2/2), 1.23 KiB | 179.00 KiB/s, done.
+From https://github.com/Nkaka23dev/Gym-Git-Exercise-Solutions
+   aabf40e..0c4bfe9  main       -> origin/main
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main|MERGING)
+$ git add .
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main|MERGING)
+$ git commit -m ""
+Aborting commit due to empty commit message.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main|MERGING)
+$ git commit -m "adde content on readMe"
+[main 6f54f35] adde content on readMe
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git push
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 519 bytes | 259.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Nkaka23dev/Gym-Git-Exercise-Solutions.git
+   0c4bfe9..6f54f35  main -> main
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git log
+commit 4f06e011fe4587f54d5c34c19b30fe23b43e7957 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Nkaka23dev <nkakaeric96@gmail.com>
+Date:   Thu Nov 10 12:36:13 2022 +0200
+
+    added team pages and modified it
+
+commit f13ae8541bb06a23cc2e444883cba240ae3b525f (ft/service-redesign)
+Merge: dada12f b279826
+Author: Nkaka23dev <nkakaeric96@gmail.com>
+Date:   Thu Nov 10 12:27:40 2022 +0200
+
+    updated
+
+commit b27982637e0074dc1786c86343810e7417beb17f (ft/contact-page)
+Author: Nkaka23dev <nkakaeric96@gmail.com>
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git cherry-pick commit 4f06e011fe4587f54d5c34c19b30fe23b43e7957
+fatal: bad revision 'commit'
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git cherry-pick 4f06e011fe4587f54d5c34c19b30fe23b43e7957
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+error: could not apply 4f06e01... added team pages and modified it
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git cherry-pick --continue".
+hint: You can instead skip this commit with "git cherry-pick --skip".
+hint: To abort and get back to the state before "git cherry-pick",
+hint: run "git cherry-pick --abort".
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page|CHERRY-PICKING)
+$ git cherry-pick --skip
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
 
 ...
