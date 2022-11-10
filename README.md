@@ -813,6 +813,9 @@ CONFLICT (content): Merge conflict in services.html
 Automatic merge failed; fix conflicts and then commit the result.
 TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/service-redesign|MERGING)
 $ git add .
+<<<<<<< HEAD
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/service-redesign|MERGING)
+$ git add .
 
 TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/service-redesign|MERGING)
 $ git commit -m "updated"
@@ -2457,3 +2460,4 @@ Successfully rebased and updated refs/heads/ft/home-page-redesign.
 TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/home-page-redesign)
 $
 ...
+
