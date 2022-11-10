@@ -811,6 +811,7 @@ $ git merge main
 Auto-merging services.html
 CONFLICT (content): Merge conflict in services.html
 Automatic merge failed; fix conflicts and then commit the result.
+<<<<<<< HEAD
 TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/service-redesign|MERGING)
 $ git add .
 
@@ -832,6 +833,8 @@ TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/service-redesign|MERGI
 $ git status
 On branch ft/service-redesign
 Your branch is up to date with 'origin/ft/service-redesign'.
+=======
+>>>>>>> 92751a0 (all changes)
 
 All conflicts fixed but you are still merging.
   (use "git commit" to conclude merge)
