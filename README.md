@@ -603,3 +603,213 @@ HEAD is now at bcc905a bring back stashed file home and abou
 TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (dev)
 $
 ...
+
+### Bundle 2 exercises 2
+
+...
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+nothing to commit, working tree clean
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/service-redesign)
+$ git log
+commit 1435d23fd88fba7cf518b451ad1f3418ae77f02b (HEAD -> ft/service-redesign, origin/ft/service-redesign)
+Author: Nkaka23dev <nkakaeric96@gmail.com>
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git add .
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git commit -m "changed service"
+[main bdb1587] changed service
+ 1 file changed, 1 insertion(+)
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 338 bytes | 338.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Nkaka23dev/Gym-Git-Exercise-Solutions.git
+   246e142..bdb1587  main -> main
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git branch
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git branch
+  dev
+  ft/bundle-2
+  ft/service-redesign
+* main
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git push origin --delete ft/service-redesign
+To https://github.com/Nkaka23dev/Gym-Git-Exercise-Solutions.git
+ - [deleted]         ft/service-redesign
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git branch -d ft/service-redesign
+error: The branch 'ft/service-redesign' is not fully merged.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git checkout main
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (2/2), 704 bytes | 64.00 KiB/s, done.
+From https://github.com/Nkaka23dev/Gym-Git-Exercise-Solutions
+   bdb1587..aabf40e  main       -> origin/main
+Updating bdb1587..aabf40e
+Fast-forward
+ README.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/service-redesign)
+$ git status
+On branch ft/service-redesign
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/service-redesign)
+$ git add --all
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/service-redesign)
+$ git commit -m "modified services"
+[ft/service-redesign dada12f] modified services
+ 1 file changed, 5 insertions(+)
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/service-redesign)
+$ git push
+fatal: The current branch ft/service-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/service-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/service-redesign)
+$ git push --set-upstream origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 325 bytes | 81.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/Nkaka23dev/Gym-Git-Exercise-Solutions/pull/new/ft/service-redesign
+remote:
+To https://github.com/Nkaka23dev/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git add --all
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git commit -m services on main"
+> ^C
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git commit -m 'services on main"
+> ^C
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git sttaus
+git: 'sttaus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   services.html
+
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git commit -m "changed services form main"
+[main b279826] changed services form main
+ 1 file changed, 1 insertion(+)
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git branch
+  dev
+  ft/bundle-2
+  ft/service-redesign
+* main
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/service-redesign)
+$ git merge main
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+...
