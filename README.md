@@ -670,6 +670,89 @@ To https://github.com/Nkaka23dev/Gym-Git-Exercise-Solutions.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 branch 'ft/bundle-2' set up to track 'origin/ft/bundle-2'.
 
-TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/bundle-2)
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   services.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git add --all
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git commit -m services on main"
+> ^C
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git commit -m 'services on main"
+> ^C
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git sttaus
+git: 'sttaus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   services.html
+
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git commit -m "changed services form main"
+[main b279826] changed services form main
+ 1 file changed, 1 insertion(+)
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git branch
+  dev
+  ft/bundle-2
+  ft/service-redesign
+* main
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git checkout ft/service-redesign
+Switched to branch 'ft/service-redesign'
+Your branch is up to date with 'origin/ft/service-redesign'.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/service-redesign)
+$ git merge main
+Auto-merging services.html
+CONFLICT (content): Merge conflict in services.html
+Automatic merge failed; fix conflicts and then commit the result.
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/service-redesign|MERGING)
+$ git add .
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/service-redesign|MERGING)
+$ git commit -m "updated"
+[ft/service-redesign f13ae85] updated
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/service-redesign)
 $
+... 
+
+
+## Bundle 3
+
+### exercises 1
+
+...
+
 ...
