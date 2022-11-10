@@ -1361,3 +1361,359 @@ Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
 
 ...
+### exercises 2
+
+...
+heGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main|MERGING)
+$ git add .
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main|MERGING)
+$ git commit -m ""
+Aborting commit due to empty commit message.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main|MERGING)
+$ git commit -m "adde content on readMe"
+[main 6f54f35] adde content on readMe
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git push
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 519 bytes | 259.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Nkaka23dev/Gym-Git-Exercise-Solutions.git
+   0c4bfe9..6f54f35  main -> main
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git log
+commit 4f06e011fe4587f54d5c34c19b30fe23b43e7957 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Nkaka23dev <nkakaeric96@gmail.com>
+Date:   Thu Nov 10 12:36:13 2022 +0200
+
+    added team pages and modified it
+
+commit f13ae8541bb06a23cc2e444883cba240ae3b525f (ft/service-redesign)
+Merge: dada12f b279826
+Author: Nkaka23dev <nkakaeric96@gmail.com>
+Date:   Thu Nov 10 12:27:40 2022 +0200
+
+    updated
+
+commit b27982637e0074dc1786c86343810e7417beb17f (ft/contact-page)
+Author: Nkaka23dev <nkakaeric96@gmail.com>
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git cherry-pick commit 4f06e011fe4587f54d5c34c19b30fe23b43e7957
+fatal: bad revision 'commit'
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git cherry-pick 4f06e011fe4587f54d5c34c19b30fe23b43e7957
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+error: could not apply 4f06e01... added team pages and modified it
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git add .
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git commit -m "updated ReadMe"
+[main 318e42f] updated ReadMe
+ 1 file changed, 531 insertions(+)
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git branch
+  dev
+  ft/bundle-2
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git status
+On branch ft/contact-page
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        contact.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git add .
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git commit -m "added contact page"
+[ft/contact-page d32fff2] added contact page
+ 1 file changed, 12 insertions(+)
+ create mode 100644 contact.html
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$ git push
+fatal: The current branch ft/contact-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/contact-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/contact-page)
+$   git push --set-upstream origin ft/contact-page
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 469 bytes | 469.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/Nkaka23dev/Gym-Git-Exercise-Solutions/pull/new/ft/contact-page 
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/faq-page)
+$ git add .
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/faq-page)
+$ git commit -m "created faq pages"
+[ft/faq-page 8473371] created faq pages
+ 1 file changed, 12 insertions(+)      
+ create mode 100644 faq.html
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/faq-page)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git log
+commit 4f06e011fe4587f54d5c34c19b30fe23b43e7957 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: Nkaka23dev <nkakaeric96@gmail.com>
+Date:   Thu Nov 10 12:36:13 2022 +0200
+
+    added team pages and modified it
+
+commit f13ae8541bb06a23cc2e444883cba240ae3b525f (ft/service-redesign)
+Merge: dada12f b279826
+Author: Nkaka23dev <nkakaeric96@gmail.com>
+Date:   Thu Nov 10 12:27:40 2022 +0200
+
+    updated
+
+commit b27982637e0074dc1786c86343810e7417beb17f
+Author: Nkaka23dev <nkakaeric96@gmail.com>
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/team-page)
+$ git checkout ft/faq-page
+Switched to branch 'ft/faq-page'
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/faq-page)
+$ git revert 4f06e011fe4587f54d5c34c19b30fe23b43e7957
+Auto-merging README.md
+CONFLICT (content): Merge conflict in README.md
+error: could not revert 4f06e01... added team pages and modified it
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git revert --continue".
+hint: You can instead skip this commit with "git revert --skip".
+hint: To abort and get back to the state before "git revert",
+hint: run "git revert --abort".
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/faq-page|REVERTING)
+$ git revert 4f06e011fe4587f54d5c34c19b30fe23b43e7957
+error: your local changes would be overwritten by revert.
+hint: commit your changes or stash them to proceed.
+fatal: revert failed
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/faq-page|REVERTING)
+$ git stash
+Saved working directory and index state WIP on ft/faq-page: 8473371 created faq pages
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/faq-page)
+$ git stash npop
+fatal: unknown subcommand: npop
+
+usage: git stash list [<options>]
+   or: git stash show [<options>] [<stash>]
+   or: git stash drop [-q|--quiet] [<stash>]
+   or: git stash ( pop | apply ) [--index] [-q|--quiet] [<stash>]
+   or: git stash branch <branchname> [<stash>]
+   or: git stash clear
+   or: git stash [push [-p|--patch] [-S|--staged] [-k|--[no-]keep-index] [-q|--quiet]
+                 [-u|--include-untracked] [-a|--all] [-m|--message <message>]
+                 [--pathspec-from-file=<file> [--pathspec-file-nul]]
+                 [--] [<pathspec>...]]
+   or: git stash save [-p|--patch] [-S|--staged] [-k|--[no-]keep-index] [-q|--quiet]
+                 [-u|--include-untracked] [-a|--all] [<message>]
+
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/faq-page)
+$ git stash pop
+On branch ft/faq-page
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (cf75e31075e7f7304ad728512c0dc4a756e66f0e)
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/faq-page)
+$ git stash pop
+No stash entries found.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/faq-page)
+$ git stash pop
+No stash entries found.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/faq-page)
+$ git stash pop
+No stash entries found.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/faq-page)
+$ git revert commit 4f06e011fe4587f54d5c34c19b30fe23b43e7957
+fatal: bad revision 'commit'
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/faq-page)
+$ git revert  4f06e011fe4587f54d5c34c19b30fe23b43e7957
+error: Your local changes to the following files would be overwritten by merge:
+        README.md
+Please commit your changes or stash them before you merge.
+Aborting
+fatal: revert failed
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/faq-page)
+$ git commit -m "all changes"
+On branch ft/faq-page
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+
+
+E325: ATTENTION
+Found a swap file by the name "~/Desktop/gitExercises/.git/.COMMIT_EDITMSG.swp"
+          owned by: TheGym   dated: Thu Nov 10 12:25:12 2022
+         file name: ~TheGym/Desktop/gitExercises/.git/COMMIT_EDITMSG
+          modified: YES
+         user name: TheGym   host name: DESKTOP-0FJL824
+        process ID: 964
+While opening file "/c/Users/TheGym/Desktop/gitExercises/.git/COMMIT_EDITMSG"
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/faq-page)
+$ git add .
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/faq-page)
+$ git commit -m "all changes"
+[ft/faq-page 8166db2] all changes
+ 1 file changed, 227 insertions(+)
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/faq-page)
+$ git revert  4f06e011fe4587f54d5c34c19b30fe23b43e7957
+hint: Waiting for your editor to close the file... Vim: Error reading input, exiting...        
+Vim: Finished.
+
+error: There was a problem with the editor 'vi'.
+Please supply the message using either -m or -F option.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/faq-page)
+$ git commit -m "all changes"
+[ft/faq-page 92751a0] all changes
+ 1 file changed, 17 deletions(-)
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/faq-page)
+$ git revert  4f06e011fe4587f54d5c34c19b30fe23b43e7957
+On branch ft/faq-page
+nothing to commit, working tree clean
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/faq-page)
+$ git push
+fatal: The current branch ft/faq-page has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/faq-page
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/faq-page)
+$  git push --set-upstream origin ft/faq-page~
+fatal: invalid refspec 'ft/faq-page~'
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/faq-page)
+$  git push --set-upstream origin ft/faq-page
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 2.12 KiB | 1.06 MiB/s, done.
+Total 9 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/Nkaka23dev/Gym-Git-Exercise-Solutions/pull/new/ft/faq-page     
+remote:
+To https://github.com/Nkaka23dev/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/faq-page)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+...
+
+## Bundle 4
+
+### exercises 2
+
+...
+vdgvvbfgdvfgdvfgf
+vggdrvfhe3fyubyg
+yu4gf9yurbf
+...
