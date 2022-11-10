@@ -2457,3 +2457,64 @@ Successfully rebased and updated refs/heads/ft/home-page-redesign.
 TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/home-page-redesign)
 $
 ...
+
+## Bundle 3
+
+### exercises 2
+
+...
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git remote add git-copy https://github.com/Nkaka23dev/git-exercises-clone.git 
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git remote
+git-copy
+origin  
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   home.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git add .
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git commit -m "changed home page for copy"
+[main d1a3b87] changed home page for copy
+ 1 file changed, 1 insertion(+)
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git push origin 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 340 bytes | 340.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/Nkaka23dev/Gym-Git-Exercise-Solutions.git
+   fa8ef86..d1a3b87  main -> main
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$ git push git-copy
+Enumerating objects: 89, done.
+Counting objects: 100% (89/89), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (87/87), done.
+Writing objects: 100% (89/89), 21.16 KiB | 1.32 MiB/s, done.
+Total 89 (delta 47), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (47/47), done.
+To https://github.com/Nkaka23dev/git-exercises-clone.git
+ * [new branch]      main -> main
+
+TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (main)
+$
+...
