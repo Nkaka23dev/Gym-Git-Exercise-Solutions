@@ -141,7 +141,7 @@ $
 
 ...
 
-### exercises 2
+#Bundle 1 exercises 2
 
 ...
 TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (dev)
@@ -1361,6 +1361,8 @@ Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
 
 ...
+## Bundle 3
+
 ### exercises 2
 
 ...
@@ -1708,7 +1710,7 @@ Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
 ...
 
-## Bundle 4
+## Bundle 3
 
 ### exercises 2
 
@@ -1838,15 +1840,7 @@ $ git checkout -b  ft/home-page-redesign
 fatal: a branch named 'ft/home-page-redesign' already exists
 
 TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/faq-page)
-$ git branch
-  dev
-  ft/bundle-2
-  ft/contact-page
-* ft/faq-page
-  ft/home-page-redesign
-  ft/service-redesign
-  ft/team-page
-  main
+
 
 TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/faq-page)
 $ git branch -D ft/home-page-redesign
@@ -1958,21 +1952,6 @@ hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 E325: ATTENTION
 Found a swap file by the name "~/Desktop/gitExercises/.git/.COMMIT_EDITMSG.swp"
           owned by: TheGym   dated: Thu Nov 10 12:25:12 2022
@@ -2065,7 +2044,7 @@ TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/home-page-redesign|REB
 $
 
 TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/home-page-redesign|REBASE 3/5)       
-$ ## Bundle 1
+
 
 TheGym@DESKTOP-0FJL824 MINGW64 ~/Desktop/gitExercises (ft/home-page-redesign|REBASE 3/5)       
 $
@@ -2311,23 +2290,6 @@ Delta compression using up to 4 threads
 Compressing objects: 100% (9/9), done.
 Writing objects: 100% (9/9), 1.14 KiB | 584.00 KiB/s, done.
 Total 9 (delta 4), reused 0 (delta 0), pack-reused 0
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 E325: ATTENTION
 Found a swap file by the name "~/Desktop/gitExercises/.git/.COMMIT_EDITMSG.swp"
